@@ -1,7 +1,7 @@
 // Find unique element in array.
 
 public class UniqueElement {
-
+    /*
     public static void sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int curr = arr[i];
@@ -30,10 +30,27 @@ public class UniqueElement {
         }
         return 0;
     }
+    */
+    
+    public static int findUnique(int[] arr) {
+        int ans = 0;
+        for (int i = 0; i < arr.length; i++) {
+            ans = ans ^ arr[i]; // xor operator, 0 ^ 0 = 0, 0 ^ 1 = 1
+        }
+        return ans;
+    }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 4, 2, 1, 3, 6, 5, 5, 6, 4};
-        sort(arr);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array : ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Enter " + size + " elements in array : ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        sc.close();
+        //sort(arr);
         System.out.println("Unique element in array = " + findUnique(arr));
     }
 }
