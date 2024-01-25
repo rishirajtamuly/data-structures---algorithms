@@ -1,4 +1,4 @@
-// Find unique element in array.
+// Find unique element in array.    {1, 2, 4, 2, 1, 3, 6, 5, 5, 6, 4}
 
 public class UniqueElement {
     /*
