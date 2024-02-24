@@ -5,9 +5,11 @@ public class FirstLetterToUppercase {
     
     public static String toUppercase(String str) {
         StringBuilder sb = new StringBuilder("");
+
         char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
-        for (int i = 1; i < str.length(); i++) {
+        
+        for (int i = 1; i < str.length(); i++) {    // Time complexity -> O(n)
             if (str.charAt(i) == ' ' && i < str.length() - 1) {
                sb.append(str.charAt(i));
                i++;
